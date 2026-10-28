@@ -543,7 +543,6 @@ async def test_tls_connectable(
         async with await TLSStream.wrap(
             server_stream,
             server_side=True,
-            hostname="localhost",
             ssl_context=server_context,
         ) as server_tls_stream:
             message = await server_tls_stream.receive()
